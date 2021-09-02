@@ -16,8 +16,9 @@ from random import randint
 a: str = "You will get a 4.0 GPA!"
 b: str = "Oh no..."
 c: str = "Pet a dog today will you?"
+d: str = "You've eaten a lot of these already..."
 
-num: int = randint(1, 3)
+num: int = randint(1, 4)
 
 print("Your fortune cookie says...")
 
@@ -27,6 +28,9 @@ else:
     if num == 2:
         print(b)
     else:
-        print(c)
+        if num == 3:
+            print(c)
+        else:
+            print(d)
 
 print("Now, go spread positive vibes!")
