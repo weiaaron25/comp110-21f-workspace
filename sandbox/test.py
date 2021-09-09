@@ -1,3 +1,2 @@
-word = "California"
-length = len(word)
-print(length)
+a = 0%2
+print(a)
