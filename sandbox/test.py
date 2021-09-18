@@ -1,5 +1,1 @@
-word: str = input("Give word: ")
-if len(set(word)) == len(word):
-    print("None")
-else:
-    print("Duplicate")
+print("\U0001F6A2")
