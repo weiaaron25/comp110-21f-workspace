@@ -5,9 +5,11 @@ import numpy
 import random
 import time
 def name_func(name: str) -> str:
+    """Asks user where they want to place ships; includes name"""
     return (f"{name}, where will you put your ship?")
 
 def create_field(field):
+    """Creates a field of water emojis to the passed field"""
     field = [[ "\U0001F30A",  "\U0001F30A",  "\U0001F30A",  "\U0001F30A", "\U0001F30A"],
 [ "\U0001F30A",  "\U0001F30A",  "\U0001F30A",  "\U0001F30A",  "\U0001F30A"],
 [ "\U0001F30A",  "\U0001F30A",  "\U0001F30A",  "\U0001F30A",  "\U0001F30A"],
@@ -38,10 +40,12 @@ print("The year is 2022. WWIII has erupted after Germany declared it a 'disgrace
 name: str = input("What's your name? ")
 
 def print_field(field) -> None:
+    """Prints each list in the matrix"""
     for i in range(0,5):
         print(field[i])
 
 def place_ships(ship_num: int) -> int:
+    """Asks where the user would like to place however many ships they designated to play with"""
     print("\n")
     print("Format:\nHorizontal: A-E\nVertical: 1-5\nExample: C2")
     for i in range(ship_num):
@@ -63,12 +67,14 @@ def place_ships(ship_num: int) -> int:
     return ship_num
 
 def comp_place_ships(ship_num: int):
+    """Randomly places ship emojis in the computer field"""
     for i in range(ship_num):
         x: int = random.randint(0,4)
         y: int = random.randint(0,4)
         field_comp[y][x] = SHIP
 
 def player_attack() -> None:
+    """Lets the user pick a spot on the computer board to fire at"""
     print_field(player_view)
     loc: str = input("Where will you fire? ")
     x = ord(loc[0]) - ASCII_VALUE_OF_A
@@ -88,6 +94,7 @@ def player_attack() -> None:
         player_turn = False
 
 def comp_attack() -> None:
+    """Computer picks a random spot on the user board to attack"""
     print("Your opponent is attacking...")
     time.sleep(3.0)
     x: int = random.randint(0,4)
@@ -103,6 +110,7 @@ def comp_attack() -> None:
         player_turn = True
 
 def take_turns(ship_num: int) -> None:
+    """Alternates between the user and computer turn and deliminates when the game ends"""
     while player_ships_hit < ship_num and comp_ships_hit < ship_num:
         if player_turn:
             print("Your move")
@@ -122,10 +130,12 @@ def take_turns(ship_num: int) -> None:
         g['points'] = update_points(g['points'],5)
 
 def update_points(points: int, new: int) -> int:
+    """Updates points"""
     total = points + new
     return total
 
 def main():
+    """Main function"""
     g = globals()
     while g['play']:
         g['field_player'] = create_field(g['field_player'])
