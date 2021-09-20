@@ -14,11 +14,11 @@ def name_func(name: str) -> str:
 def create_field(field: list[list[str]]) -> list[list[str]]:
     """Creates a field of water emojis to the passed field."""
     field = [[" ", "A", " B", " C", " D", " E"],
-            ["1", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A"],
-            ["2", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A"],
-            ["3", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A"],
-            ["4", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A"],
-            ["5", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A"]]
+             ["1", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A"],
+             ["2", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A"],
+             ["3", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A"],
+             ["4", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A"],
+             ["5", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A", "\U0001F30A"]]
     return field
 
 
