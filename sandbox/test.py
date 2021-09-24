@@ -1,1 +1,3 @@
-print("\U0001F6A2")
+x = 3
+y = 3
+print(y == x)
