@@ -16,12 +16,18 @@ def only_evens(nums: list[int]) -> list[int]:
 
 def sub(nums: list[int], start: int, finish: int) -> list[int]:
     """Function that gives a range in a list of ints."""
-    if start <= 0:
-        start = 1
+    if nums == []:
+        return nums
+    if start < 0:
+        start = 0
+    if start > len(nums):
+        return []
+    if finish < 0:
+        return []
     if finish > len(nums):
         finish = len(nums)
     new_list: list[int] = []
-    new_list = nums[start - 1:finish - 1]
+    new_list = nums[start:finish]
     return new_list
 
 
