@@ -1,3 +1,2 @@
-x = 3
-y = 3
-print(y == x)
+list_num: list[int] = ['3']
+print(list_num[0.0])
